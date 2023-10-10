@@ -16,7 +16,7 @@ type DriversListProps = {
 
 export const DriversList: FC<DriversListProps> = ({ drivers, onPress }) => (
   <div className="flex flex-1 flex-col gap-4 p-4 w-full">
-    {drivers.map((driver) => (
+    {drivers?.map((driver) => (
       <DriverCard key={driver.id} driver={driver} onPress={() => onPress(driver.id)} />
     ))}
   </div>
